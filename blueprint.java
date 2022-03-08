@@ -13,6 +13,7 @@ class Main {
         Scanner scan = new Scanner(System.in);
 
         Solution solution = new Solution();
+
         Object answer = solution.solve();
         System.out.println(answer.toString());
     }
