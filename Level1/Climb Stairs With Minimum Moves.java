@@ -12,7 +12,8 @@ class Solution {
             int steps = A.get(i);
 
             if (steps == 0) {
-                dp[i] = n;
+                dp[i] = n; // IMP : if step=0, we can't ever reach destination; set as N to discourage ever
+                           // going to this step
                 continue;
             }
 
