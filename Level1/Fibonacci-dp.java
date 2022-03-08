@@ -1,5 +1,3 @@
-package Level1;
-
 import java.io.*;
 import java.util.*;
 
@@ -20,7 +18,7 @@ class Solution {
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) throws Exception {
         // write your code here
         Scanner scan = new Scanner(System.in);
