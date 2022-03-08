@@ -6,20 +6,29 @@ class Solution {
     public Object solve(ArrayList<Integer> A) {
         int n = A.size();
         int[] dp = new int[n + 1];
-
-        // smaller subproblem from right to left
-        dp[n] = 1;
+        dp[n] = 0;
 
         for (int i = n - 1; i >= 0; --i) {
-            int availableSteps = A.get(i);
-            for (int j = 1; j <= availableSteps; ++j) {
+            int steps = A.get(i);
+
+            if (steps == 0) {
+                dp[i] = n;
+                continue;
+            }
+
+            int min = Integer.MAX_VALUE;
+            for (int j = 1; j <= steps; ++j) {
                 int tempIndex = i + j;
                 if (tempIndex >= dp.length)
                     break;
-                else
-                    dp[i] += dp[tempIndex];
+                min = Math.min(min, 1 + dp[tempIndex]);
+
             }
+
+            dp[i] += min;
+
         }
+
         return dp[0];
     }
 }
