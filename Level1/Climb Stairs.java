@@ -24,20 +24,6 @@ class Solution {
     }
 }
 
-class Pre {
-    public static void main(String[] args) {
-        ArrayList<Integer> A = new ArrayList<Integer>();
-        int[] temp = { 3, 2, 4, 2, 0, 2, 3, 1, 2, 2 };
-        for (int i = 0; i < temp.length; ++i) {
-            A.add(temp[i]);
-        }
-
-        Solution sol = new Solution();
-        Object answer = sol.solve(10);
-        System.out.println(answer.toString());
-    }
-}
-
 public class Main {
 
     public static void main(String[] args) {
